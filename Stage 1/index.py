@@ -6,10 +6,10 @@ from pandas.io.json import json_normalize
 import csv
 import json
 #Variable that contain user credentials to access Twitter API
-access_token="1705054591-UmF3EDjblZ7rknx7JKYmu716X2PTbiyoVv9Tcrr"
-access_token_secret="fykQJomSAXCxVa3WDvGjWS61AOtofv8E7RRdSm5lil1eC"
-consumer_key="SbciRjxB88YQZTxnfVvlfGrQR"
-consumer_secret="waNX7roMCQoKxVXfRJYSg42uybrWKIMthxjoTVsPnXMRIBAio4"
+access_token="my-key"
+access_token_secret="my-key"
+consumer_key="my-key"
+consumer_secret="my-key"
 
 #Handles twitter authentication and connects to twitter Stream API
 auth=tweepy.OAuthHandler(consumer_key,consumer_secret)
