@@ -16,7 +16,7 @@ data=pd.read_csv("Data/Combined_1.1.csv")
 # Calculating number of occurences of 'bots' word and its variations in decription field and also number of days since account was created
 data=Custom_Features_Calc.Calculate_Decription_Days(data)
 
-RFEData=np.array(data[['desc_bot','Age','followers_count','friends_count','listed_count','favourites_count','verified','statuses_count','default_profile_image','default_profile','has_extended_profile']])
+RFEData=np.array(data[['loc','Age','desc_bot','followers_count','friends_count','favourites_count','statuses_count','listed_count','verified','has_extended_profile','default_profile']])
 RFEDataLabels=np.array(data['bot'])
 
 
@@ -24,7 +24,7 @@ clf=RandomForestClassifier(n_estimators=10, max_depth=None,min_samples_split=2, 
 clf=RFE(clf,1)
 clf.fit(RFEData,RFEDataLabels)
 
-cols=['desc_bot','Age','followers_count','friends_count','listed_count','favourites_count','verified','statuses_count','default_profile_image','default_profile','has_extended_profile']
+cols=['loc','Age','desc_bot','followers_count','friends_count','favourites_count','statuses_count','listed_count','verified','has_extended_profile','default_profile']
 print("USING RFE, the ranks of each feature are:")
 for i in range(len(cols)):
     print(cols[i],":",clf.ranking_[i])

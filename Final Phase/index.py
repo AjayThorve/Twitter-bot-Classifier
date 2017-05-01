@@ -22,8 +22,8 @@ test=Custom_Features_Calc.Calculate_Decription_Days(test)
 
 
 # As per the best features using graph analysis and RFE results, creating the features vectors for training and testing
-features_train=np.array(train[['Age','followers_count','friends_count','favourites_count','statuses_count','listed_count','verified']])
-features_test=np.array(test[['Age','followers_count','friends_count','favourites_count','statuses_count','listed_count','verified']])
+features_train=train[['Age','desc_bot','followers_count','friends_count','favourites_count','statuses_count','listed_count','verified','has_extended_profile','default_profile']]
+features_test=test[['Age','desc_bot','followers_count','friends_count','favourites_count','statuses_count','listed_count','verified','has_extended_profile','default_profile']]
 
 # creating testing and training labels  
 train_labels=np.array(train['bot'])
