@@ -12,8 +12,8 @@ import Adaboost,SVM,DecisionTree,NaiveBayes,RandomForest,GradientBoosting
 
 
 # Reading data from the combined csv file including bots and non bots
-train=pd.read_csv("train_data1.csv")
-test=pd.read_csv("test_data1.csv")
+train=pd.read_csv("Data/train_data1.csv")
+test=pd.read_csv("Data/test_data1.csv")
 
 # Splitting the data : 60% training and 40% testing
 #train, test = train_test_split(data, test_size = 0.4)
